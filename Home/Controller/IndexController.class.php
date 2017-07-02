@@ -12,11 +12,10 @@ class IndexController extends Controller {
        $this->display(); 
     }
     public function show(){
-        p($_GET);exit;
-       //$this->cate=M('cate')->order('sort')->select();
-       //$id=I('id','','intval');
-       //$this->blog=M('blog')->select($id);
-       //$this->display();
+       $this->cate=M('cate')->order('sort')->select();
+       $id=I('id','','intval');
+       $this->blog=M('blog')->select($id);
+       $this->display();
     }
     //登录地址
   public function login($type = null){
